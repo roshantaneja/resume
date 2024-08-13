@@ -1,0 +1,208 @@
+% !TeX spellcheck = en_GB
+% !TeX program = pdflatex
+%
+% LuxSleek-CV 1.1 LaTeX template
+% Author: Andreï V. Kostyrka, University of Luxembourg
+%
+% 1.1: added tracking and letter-spacing for prettier lower caps, added `~` for language levels
+% 1.0: initial release
+%
+% This template fills the gap in the available variety of templates
+% by proposing something that is not a custom class, not using any
+% hard-coded settings deeply hidden in style files and provides
+% a handful of custom command definitions that are as transparent as possible.
+% Developed at the University of Luxembourg.
+%
+% *NOTHING IS HARCODED and never should be.*
+%
+% Target audience: applicants in the IT industry or business in general
+%
+% The main strength of this template is that it explicitly showcases how
+% to break the flow of text to achieve the most flexible proper alignment
+% of dates for multiple configurations.
+
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add color to the document
+\usepackage[pro]{fontawesome5}
+
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+
+% \usepackage{FiraSans}        % Change this to use any font, but keep it simple
+
+\usepackage{FiraSans}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvblue}{HTML}{aaaaaa}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.3\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+\Large \textbf{\textsc{Roshan Taneja}} \normalsize
+\is
+\faHome\ Cupertino, CA, United States\\[0.5ex]
+\faPhone\ +1 (650) 660 1901\\[0.5ex]
+\faEnvelope\ rytaneja [at] gmail [dot] com
+
+\headleft{Awards}
+\smaller{Melvin Jones International Humanitarian Services Award} \dates{2024}
+
+\is
+\smaller{Next Generation Foresight Practitioner - Youth Voices UN SDG \#6 Award} \dates{2023}
+
+\is
+\smaller{AP Scholar with Distinction} \dates{2024}
+
+\is
+\smaller{Menlo Rotary Excellence in Computer Science Award} \dates{2023}
+
+\is
+\smaller{Spanish Honors Convocation} \dates{2023}
+
+\is
+\smaller{AP English Lang Honors Convocation} \dates{2024}
+
+\is
+\smaller{Control and Innovate Award, NorCal Robotics} \dates{2023, 2024}
+
+
+\headleft{Leadership}
+\smaller{President, Maji Wells, Water Programs} \dates{2021-present}
+\is
+\smaller{Class Officer, Sacred Heart} \dates{2023-present}
+\is
+\smaller{Co-founder, Improv Club, Sacred Heart} \dates{2022-present}
+\is
+\smaller{Hardware Lead, Robotics Club, Sacred Heart} \dates{2022-Present}
+
+\headleft{Recognized and Featured}
+\smaller{Changing Lives [Sprint 24], Sacred Heart Magazine} \dates{2024}
+\is
+\smaller{Presenter, MDCON24, Multi-District East Africa Conference} \dates{2023}
+\is
+
+
+\headleft{Skills}
+C, C++, Python, Tensorflow, Javascript, Java, LaTeX
+
+\headleft{Socials}
+\faGlobe ~\hyperlink{https://www.roshan.codes}{roshan.codes} \\
+\faGithub ~\hyperlink{https://github.com/Daroshi11260}{github.com/roshantaneja} \\
+\faLinkedin ~\hyperlink{https://www.linkedin.com/in/roshan-taneja/}{linkedin.com/roshan-taneja} \\
+\faSquare ~\hyperlink{https://roshantaneja.stck.me/}{roshantaneja.stck.me}
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the color box
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{2ex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\headright{Projects, Volunteering, \& Work Experience}
+
+\textsc{President, Water Programs} \textit{@ Maji Wells (Tanzania).}  \dates{2021--present} \\
+\smaller{Reduced need for women to walk for water from 9 hrs per day to 3 hrs/day by fundraising and deploying 15 rainwater harvesting units over four years; Helps 4500+ Maasai in Monduli, TZ} \\
+\smaller{Led a team of 10 students to conduct on-ground research that got published in the National High School Journal of Science} \\
+\smaller{Developed a machine learning-based satellite image classification model to identify living locations for 30,000 Maasai to plan the placement of the next 100 water harvesting units.}
+
+\textsc{Class Officer} \textit{@ Sacred Heart Prep}  \dates{2023--2025} \\
+\smaller{As 1 of 4 officers, planned and executed 25 events; Introduced three new annual, cross-grade events across 500+ students that became recurring traditions [i.e., handless pie eating contest]}
+
+
+\textsc{Sales and Mechanic} \textit{@ Calabas Cyclery}  \dates{Summer 2022--Fall 2022} \\
+\smaller{Sold bicycles worth 15K, managed floor inventory, fixed cycles, and managed check-out counter; Upgraded  website and social media accounts with more high-resolution pictures, online catalog, video posting}
+
+\textsc{Engineering Intern} \textit{@ Fluxon Apps}  \dates{Summer 2023} \\
+\smaller{Built typescript tool to automate previously manual billing and headcount for 200+ employees. Saved 2000 annual man-hrs; first intern for the company}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\headright{Education}
+
+\textsc{High School} \textit{@ Sacred Heart Preparatory}. \dates{2022--2025} \\
+\smaller {GPA: 3.94: ACT: 36 (Math: 36, Science: 36, Reading: 36, English: 34)}\\
+\smaller {AP: Calculus BC [5], Physics 1 [5], Computer Science A [5],  Macroeconomics [4], Microeconomics [4], Physics C, English Lit, English Lang}\\
+\smaller{Post-AP: Advanced Topics in Math Honors, Advanced Topics in Computer Science, Machine Learning Honors}
+
+\is
+\textsc{Intermediate Data Science} \textit{@ UCLA} \dates{Summer 2024}
+
+\textsc{Introduction to Climate Science} \textit{@ UC Berkley} \dates{Summer 2024}
+
+\textsc{Remote Sensing 4 Disaster Response} \textit{@ MIT Beaver Works} \dates{Spring 2024}
+
+\textsc{Data Structures and Algorithms} \textit{@ John Hopkins CTY} \dates{Summer 2023}
+
+\textsc{Global Mathematics} \textit{@ Duke} \dates{Summer 2022}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\headright{Publications and Academic Conferences}
+
+\textsc{Presenter: Machine Learning 4 Earth Observation Conf.} \textit{@ The University of Exeter, UK} \dates{2024}
+
+\is
+\textsc{Publication: Assessing the Impact of Rainwater Harvesting on 4500+ Maasai} \dates{2024} \\
+\smaller{Published @ NHSJS}
+
+\is
+\textsc{Publication: Object Detection in Satellite Imagery for placement of rainwater units, Losiminigori, Tanzania} \dates{2024} \\
+\smaller{Peer Review @ NHSJS}
+
+\is
+\textsc{Presenter: MDCON23, Multi-District East Africa Conf.} \textit{@ Lions International, Tanzania} \dates{2023} \\
+\smaller{Audience of 600 intl. Members from across East Africa}
+
+\is
+\textsc{Short Story: "Pomegranates"} \dates{2024} \\
+\smaller{Published in The Ravens Perch, PALM, Beyond Words Magazine}
+
+\end{minipage}
+\end{document}
